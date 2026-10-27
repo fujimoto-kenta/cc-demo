@@ -103,6 +103,8 @@ E2Eテストを実行して、結果をチームに共有できるArtifactにま
 /cc-demo-kit:test-report
 ```
 
+**見本**: [cc-demo E2E テスト結果](https://claude.ai/artifact/GP2hHL3LxPEGgru1CWF28o)（期限日ブランチで実行した15件の結果。共有設定は発表者が行う）
+
 **注意**
 
 - Artifact は**対話モード**でのみ使える（`claude -p` では作れない）
