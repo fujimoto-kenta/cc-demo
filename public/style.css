@@ -6,6 +6,7 @@
   --border: #e7e5e4;
   --accent: #c2410c;
   --done: #a8a29e;
+  --danger: #dc2626;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,6 +18,7 @@
     --border: #44403c;
     --accent: #fb923c;
     --done: #78716c;
+    --danger: #f87171;
   }
 }
 
@@ -61,6 +63,10 @@ button {
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: 8px;
+}
+
+.new-todo input[type="date"] {
+  flex: none;
 }
 
 .new-todo button {
@@ -129,6 +135,21 @@ button {
 .todo-item.completed label {
   color: var(--done);
   text-decoration: line-through;
+}
+
+.todo-item .due {
+  color: var(--muted);
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.todo-item.overdue label,
+.todo-item.overdue .due {
+  color: var(--danger);
+}
+
+.todo-item.overdue .due {
+  font-weight: bold;
 }
 
 .todo-item .delete {
