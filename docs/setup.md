@@ -70,6 +70,7 @@ git switch main            # ハンズオンは main から始める
 
 | 症状 | 対処 |
 | --- | --- |
+| 許可済みのはずのコマンドで毎回確認される | そのフォルダで `claude` を対話起動し、「このフォルダを信頼する」を承認する。未承認だと `.claude/settings.json` の許可設定が無視される |
 | `claude: command not found` | ターミナルを開き直す。それでも駄目なら `~/.local/bin` が PATH に入っているか確認 |
 | ログイン画面が開かない（WSL） | 表示された URL を Windows 側のブラウザに貼り付ける |
 | `npm ci` が `min-release-age` で失敗する | 公開直後の版を拾っている。`package-lock.json` を変更していないか確認 |
