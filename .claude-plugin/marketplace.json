@@ -1,0 +1,14 @@
+{
+  "name": "cc-demo",
+  "description": "Claude Code デモ用のプラグイン集",
+  "owner": {
+    "name": "Fujimoto Kenta"
+  },
+  "plugins": [
+    {
+      "name": "cc-demo-kit",
+      "source": "./plugins/cc-demo-kit",
+      "description": "E2E テストの実行・レポート作成・テストレビューと、JS の構文チェック Hook"
+    }
+  ]
+}

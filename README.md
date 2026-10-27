@@ -34,3 +34,14 @@ npm run test:e2e     # Playwright の E2E テスト
 | `.claude/settings.json` | 確認なしで実行してよいコマンド、読ませないファイルの設定 |
 | `.claude/skills/run-e2e/SKILL.md` | E2E テストの実行と失敗調査の手順（Skill） |
 | `.npmrc` | 公開から3日未満の npm パッケージを拒否、バージョン固定 |
+| `.mcp.json` | Playwright MCP（Claude がブラウザを操作できるようにする）。初回起動時に承認が必要 |
+| `plugins/cc-demo-kit/` | デモ用プラグイン（Skill・Subagent・Hook のセット） |
+| `.claude-plugin/marketplace.json` | このリポジトリをプラグインのマーケットプレイスとして公開する定義 |
+
+## デモ用プラグインのインストール
+
+```text
+/plugin install cc-demo-kit --marketplace fujimoto-kenta/cc-demo
+```
+
+インストールせずに試すときは `claude --plugin-dir ./plugins/cc-demo-kit` で起動する。

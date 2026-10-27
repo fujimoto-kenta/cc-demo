@@ -1,0 +1,8 @@
+{
+  "name": "cc-demo-kit",
+  "description": "E2E テストの実行・レポート作成・テストレビューと、JS の構文チェック Hook",
+  "version": "1.0.0",
+  "author": {
+    "name": "Fujimoto Kenta"
+  }
+}

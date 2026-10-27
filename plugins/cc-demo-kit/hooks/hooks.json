@@ -1,0 +1,18 @@
+{
+  "description": "JavaScript を編集した直後に構文チェックし、エラーを Claude に伝える",
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node",
+            "args": ["${CLAUDE_PLUGIN_ROOT}/hooks/check-js.mjs"],
+            "timeout": 30
+          }
+        ]
+      }
+    ]
+  }
+}

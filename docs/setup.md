@@ -26,7 +26,7 @@ irm https://claude.ai/install.ps1 | iex
 # Homebrew
 brew install --cask claude-code
 
-# npm（Node.js 18 以上）
+# npm（Node.js 22 以上）
 npm install -g @anthropic-ai/claude-code
 ```
 
@@ -52,6 +52,7 @@ git clone https://github.com/fujimoto-kenta/cc-demo.git
 cd cc-demo
 npm ci
 npx playwright install --with-deps chromium
+npx @playwright/mcp@0.0.83 install-browser chrome-for-testing   # Playwright MCP 用のブラウザ
 ```
 
 - `npm ci` は `.npmrc` の設定により、公開から3日未満のパッケージを拒否します。
@@ -74,6 +75,7 @@ git switch main            # ハンズオンは main から始める
 | `claude: command not found` | ターミナルを開き直す。それでも駄目なら `~/.local/bin` が PATH に入っているか確認 |
 | ログイン画面が開かない（WSL） | 表示された URL を Windows 側のブラウザに貼り付ける |
 | `npm ci` が `min-release-age` で失敗する | 公開直後の版を拾っている。`package-lock.json` を変更していないか確認 |
+| Playwright MCP が `Browser "chrome-for-testing" is not installed` で失敗する | MCP はテストとは別版の Playwright を内蔵しているため、`npx @playwright/mcp@0.0.83 install-browser chrome-for-testing` を実行 |
 | `Host system is missing dependencies` | `npx playwright install-deps chromium` を実行（sudo が必要） |
 | `Error: http://localhost:3100 is already used` | 別のターミナルで起動中のテスト用サーバーを止める |
 | `localhost:3000` が既に使われている | `PORT=3001 npm start` のように別ポートで起動する |
