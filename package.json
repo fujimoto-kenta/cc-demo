@@ -1,0 +1,19 @@
+{
+  "name": "cc-demo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Claude Code デモ用のシンプルな TODO アプリ",
+  "type": "module",
+  "scripts": {
+    "start": "node server.mjs",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui",
+    "test:e2e:headed": "playwright test --headed"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.64.1"
+  }
+}
