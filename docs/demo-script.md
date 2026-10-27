@@ -31,7 +31,10 @@
 
 ### 1. 計画を立てさせる（2分）
 
-`claude` を起動し、Shift+Tab で **Plan mode** に切り替えてから入力:
+Manual モードで起動し（`claude --permission-mode default`）、Shift+Tab を押して **Plan mode** に切り替えてから入力:
+
+> 初期設定の Auto モードでは、編集やコマンドがほぼ確認なしで進む（危険な操作だけ自動でチェックされる）。
+> デモでは「人が確認して許可している」様子を見せたいので Manual で始める。
 
 ```text
 public/ に素のHTML/CSS/JavaScriptでTODOアプリを作りたい。
@@ -45,7 +48,7 @@ public/ に素のHTML/CSS/JavaScriptでTODOアプリを作りたい。
 
 計画を承認。編集の確認画面で差分を見せながら許可していく。
 
-話すこと: 1つずつ確認するのが基本。慣れたら Shift+Tab で「編集を自動承認」にできる。
+話すこと: 慣れるまでは Manual で1つずつ確認するのが安心。普段使いは初期設定の Auto モードで、危険な操作だけ自動でチェックされる。Shift+Tab でいつでも切り替えられる。
 
 ### 3. 動かしてみる（2分）
 
