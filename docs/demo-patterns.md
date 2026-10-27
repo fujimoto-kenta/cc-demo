@@ -97,16 +97,19 @@
 **ねらい**: ターミナルの文字の羅列ではなく、上司やチームにそのまま送れる Web ページを出せることを見せる。
 
 ```text
-E2Eテストを実行して、結果をチームに共有できるArtifactにまとめて
+E2Eテストを画面付きで実行して、各テストの画面キャプチャも含めて結果をチームに共有できるArtifactにまとめて
 ```
 
-プラグイン `cc-demo-kit` を入れていれば次の1行でも同じことができる。
+このリポジトリではスキルを用意してあるので、次の1行でも同じことができる（プラグイン `cc-demo-kit` を入れた場合は `/cc-demo-kit:test-report`）。
 
 ```text
-/cc-demo-kit:test-report
+/test-report
+/test-report headedで画面を見せながら
 ```
 
-**見本**: [cc-demo E2E テスト結果](https://claude.ai/artifact/GP2hHL3LxPEGgru1CWF28o)（期限日ブランチで実行した15件の結果。共有設定は発表者が行う）
+`playwright.config.js` で全テストの最後の画面を保存する設定（`screenshot: 'on'`）にしてあるので、レポートには各テストの画面キャプチャが並ぶ。
+
+**見本**: [cc-demo E2E テスト結果](https://claude.ai/artifact/GP2hHL3LxPEGgru1CWF28o)（期限日ブランチで実行した15件の結果と画面キャプチャ。共有設定は発表者が行う）
 
 **注意**
 

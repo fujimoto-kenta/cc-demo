@@ -7,11 +7,17 @@ export default defineConfig({
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
-  reporter: [['list'], ['html', { open: 'never' }]],
+  // json はテスト結果の Artifact 作成用（スクリーンショットのパスも入る）
+  reporter: [
+    ['list'],
+    ['html', { open: 'never' }],
+    ['json', { outputFile: 'test-results/results.json' }],
+  ],
   use: {
     baseURL: `http://localhost:${port}`,
     trace: 'retain-on-failure',
-    screenshot: 'only-on-failure',
+    // 成功したテストも最後の画面を残し、レポートに載せられるようにする
+    screenshot: 'on',
   },
   projects: [{ name: 'chromium', use: { ...devices['Desktop Chrome'] } }],
   // テスト実行時にアプリを自動で起動する
