@@ -17,6 +17,11 @@ const types = {
 
 createServer(async (req, res) => {
   const { pathname } = new URL(req.url, 'http://localhost');
+  // Playwright がサーバーの起動完了を待つためのエンドポイント
+  if (pathname === '/healthz') {
+    res.writeHead(200).end('ok');
+    return;
+  }
   const path = normalize(join(root, pathname === '/' ? 'index.html' : pathname));
   if (!path.startsWith(root)) {
     res.writeHead(403).end('Forbidden');

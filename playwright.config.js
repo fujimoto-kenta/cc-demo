@@ -17,7 +17,7 @@ export default defineConfig({
   // テスト実行時にアプリを自動で起動する
   webServer: {
     command: 'npm start',
-    url: `http://localhost:${port}`,
+    url: `http://localhost:${port}/healthz`,
     env: { PORT: String(port) },
     reuseExistingServer: !process.env.CI,
   },
