@@ -34,7 +34,7 @@ npm run test:e2e     # Playwright の E2E テスト
 | ファイル | 役割 |
 | --- | --- |
 | `CLAUDE.md` | プロジェクトのルールとコマンド。起動時に自動で読み込まれる |
-| `.claude/settings.json` | 確認なしで実行してよいコマンド、読ませないファイルの設定 |
+| `.claude/settings.json` | 返答の言語（日本語）、確認なしで実行してよいコマンド、読ませないファイルの設定 |
 | `.claude/skills/run-e2e/SKILL.md` | E2E テストの実行と失敗調査の手順（Skill） |
 | `.npmrc` | 公開から3日未満の npm パッケージを拒否、バージョン固定 |
 | `.mcp.json` | Playwright MCP（Claude がブラウザを操作できるようにする）。初回起動時に承認が必要 |
