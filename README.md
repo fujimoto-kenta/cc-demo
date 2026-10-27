@@ -6,7 +6,9 @@ Claude Code の使い方を紹介するためのデモリポジトリ。
 ## ドキュメント
 
 - [環境構築手順（参加者向け）](docs/setup.md)
-- [デモ台本（発表者向け）](docs/demo-script.md)
+- [デモ台本（発表者向け）](docs/demo-script.md) — バグ修正デモの詳しい台本
+- [デモパターン集](docs/demo-patterns.md) — 9種類のデモと、聴き手に合わせた選び方
+- [チーム開発での運用構成（提案）](docs/team-setup.md) — SaaS と MCP の連携、CI、Git 運用、セキュリティ
 
 ## ブランチ
 
@@ -15,6 +17,7 @@ Claude Code の使い方を紹介するためのデモリポジトリ。
 | `main` | 土台のみ。ライブデモはここから TODO アプリを作る |
 | `demo/buggy-app` | 完成した TODO アプリ（デモ用のバグ入り） |
 | `demo/fixed` | バグ修正と回帰テスト入りの完成版 |
+| `demo/feature-due-date` | 完成版に期限日機能を追加したもの（新機能デモの参考実装） |
 
 ## クイックスタート
 
