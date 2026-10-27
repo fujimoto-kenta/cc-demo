@@ -31,7 +31,7 @@ function visibleTodos() {
 function render() {
   list.innerHTML = '';
 
-  visibleTodos().forEach((todo, index) => {
+  visibleTodos().forEach((todo) => {
     const item = document.createElement('li');
     item.className = 'todo-item' + (todo.completed ? ' completed' : '');
 
@@ -50,7 +50,7 @@ function render() {
     remove.className = 'delete';
     remove.textContent = '×';
     remove.setAttribute('aria-label', `「${todo.title}」を削除`);
-    remove.addEventListener('click', () => removeAt(index));
+    remove.addEventListener('click', () => removeTodo(todo.id));
 
     item.append(checkbox, label, remove);
     list.append(item);
@@ -78,8 +78,8 @@ function toggle(id) {
   render();
 }
 
-function removeAt(index) {
-  todos.splice(index, 1);
+function removeTodo(id) {
+  todos = todos.filter((todo) => todo.id !== id);
   save();
   render();
 }
