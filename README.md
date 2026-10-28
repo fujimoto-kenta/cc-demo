@@ -9,6 +9,7 @@ Claude Code の使い方を紹介するためのデモリポジトリ。
 - [デモ台本（発表者向け）](docs/demo-script.md) — バグ修正デモの詳しい台本
 - [デモパターン集](docs/demo-patterns.md) — 9種類のデモと、聴き手に合わせた選び方
 - [チーム開発での運用構成（提案）](docs/team-setup.md) — SaaS と MCP の連携、CI、Git 運用、セキュリティ
+- [現場での活用例（参考）](docs/field-practice.md) — フェーズ別 Skill をマーケットプレイスで共有する構成
 
 ## ブランチ
 
