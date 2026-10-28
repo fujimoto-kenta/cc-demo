@@ -1,12 +1,5 @@
 import { test, expect } from '@playwright/test';
-
-async function addTodos(page, ...titles) {
-  const input = page.getByLabel('新しいTODO');
-  for (const title of titles) {
-    await input.fill(title);
-    await input.press('Enter');
-  }
-}
+import { addTodos } from './helpers.js';
 
 test.beforeEach(async ({ page }) => {
   await page.goto('/');
